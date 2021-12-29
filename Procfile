@@ -1,1 +1,1 @@
-web:gunicorn diyblog.wsi --log-file -
+web:gunicorn diyblog.wsgi --log-file -
