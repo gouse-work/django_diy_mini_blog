@@ -1,0 +1,1 @@
+web:gunicorn diyblog.wsi --log-file -
