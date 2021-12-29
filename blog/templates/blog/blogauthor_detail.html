@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+{% block title %} {{blogauthor_detail.user}} {% endblock %}
+{% block content %}
+    <h1>Blogger: {{blogauthor.user}}</h1>
+    <h4>Bio</h4>
+    <p>{{blogauthor.bio}}</p>
+
+    <h4>Blog list</h4>
+
+    {% if blogs %}
+        <ul>
+            {% for blog in blogs %}
+                <li><a href="{{blog.get_absolute_url}}">{{blog.name}}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no blogs yet!</p>
+    {% endif %}
+{% endblock %}
